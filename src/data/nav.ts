@@ -10,8 +10,8 @@ export const navigationData: LinkType[] = [
     label: "About",
   },
   {
-    href: "/contact",
-    label: "Contact",
+    href: "/cubemovement",
+    label: "CubeMovement",
   },
   {
     href: "/mewtwo",

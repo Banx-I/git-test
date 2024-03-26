@@ -31,6 +31,25 @@ body {
   background-color: var(--color-gray-400)
 }
 
+.container {
+  position: relative;
+  width: 100vw; /* Postavlja širinu kontejnera na širinu cijelog ekrana */
+  height: 100vh; /* Postavlja visinu kontejnera na visinu cijelog ekrana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__box {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: absolute;
+}
+
+
+
+
 //IMPORTS
 //components
 @import "./components/layout.scss";
@@ -38,6 +57,7 @@ body {
 @import "./components/header.scss";
 @import "./components/nav.scss";
 @import "./components/tag.scss";
+
 
 //utils
 @import "./utils/margins.scss";

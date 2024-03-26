@@ -1,53 +1,50 @@
 import { useState } from 'react';
 
-
+// Definicija tipa Props izvan komponente
+type Props = {
+  stringValue: string;
+  stringArrayValue: string[];
+  numberValue: number;
+  numberArrayValue: number[];
+  objectValue: { key: string };
+  objectArrayValue: { key: string }[];
+  booleanValue: boolean;
+};
 
 const StateTest = () => {
-  // Definicija tipova 
-  type StringState = string;
-  type StringArrayState = string[];
-  type NumberState = number;
-  type NumberArrayState = number[];
-  type ObjectState = object;
-  type ObjectArrayState = object[];
-  type BooleanState = boolean;
-
-
-  // Tip podataka
-  const [stringValue, setStringValue] = useState<StringState>('Initial string');
-  const [stringArrayValue, setStringArrayValue] = useState<StringArrayState>(['Item 1', 'Item 2']);
-  const [numberValue, setNumberValue] = useState<NumberState>(0);
-  const [numberArrayValue, setNumberArrayValue] = useState<NumberArrayState>([1, 2, 3]);
-  const [objectValue, setObjectValue] = useState<ObjectState>({ key: 'value' });
-  const [objectArrayValue, setObjectArrayValue] = useState<ObjectArrayState>([{ key: 'value' }, { key: 'another value' }]);
-  const [booleanValue, setBooleanValue] = useState<BooleanState>(true);
-
+  // Korištenje useState unutar komponente za inicijalizaciju stanja s proslijeđenim vrijednostima iz propsa
+  const [stringValueState, setStringValueState] = useState<Props['stringValue']>('Initial string');
+  const [stringArrayValueState, setStringArrayValueState] = useState<Props['stringArrayValue']>(['Item 1', 'Item 2']);
+  const [numberValueState, setNumberValueState] = useState<Props['numberValue']>(0);
+  const [numberArrayValueState, setNumberArrayValueState] = useState<Props['numberArrayValue']>([1, 2, 3]);
+  const [objectValueState, setObjectValueState] = useState<Props['objectValue']>({ key: 'value' });
+  const [objectArrayValueState, setObjectArrayValueState] = useState<Props['objectArrayValue']>([{ key: 'value' }, { key: 'another value' }]);
+  const [booleanValueState, setBooleanValueState] = useState<Props['booleanValue']>(true);
 
   // Funkcije za promjenu pojedinačnih stanja
-  const changeStringValue = () => setStringValue('New string value');
-  const changeNumberValue = () => setNumberValue(prevValue => prevValue + 1);
-  const changeObjectValue = () => setObjectValue({ key: 'new value' });
-  const toggleBooleanValue = () => setBooleanValue(prevValue => !prevValue);
+  const changeStringValue = () => setStringValueState('New string value');
+  const changeNumberValue = () => setNumberValueState(prevValue => prevValue + 1);
+  const changeObjectValue = () => setObjectValueState({ key: 'new value' });
+  const toggleBooleanValue = () => setBooleanValueState(prevValue => !prevValue);
 
-  // Funkcije za dodavanje i brisanje elementa iz array-a
-  const addItemToStringArray = () => setStringArrayValue(prevArray => [...prevArray, `Item ${prevArray.length + 1}`]);
-  const removeItemFromStringArray = () => setStringArrayValue(prevArray => prevArray.slice(0, -1));
-  const addItemToNumberArray = () => setNumberArrayValue(prevArray => [...prevArray, prevArray.length + 1]);
-  const removeItemFromNumberArray = () => setNumberArrayValue(prevArray => prevArray.slice(0, -1));
-  const addItemToObjectArray = () => setObjectArrayValue(prevArray => [...prevArray, { key: 'new value' }]);
-  const removeItemFromObjectArray = () => setObjectArrayValue(prevArray => prevArray.slice(0, -1));
+  // Funkcije za dodavanje i brisanje elemenata iz array-a
+  const addItemToStringArray = () => setStringArrayValueState(prevArray => [...prevArray, `Item ${prevArray.length + 1}`]);
+  const removeItemFromStringArray = () => setStringArrayValueState(prevArray => prevArray.slice(0, -1));
+  const addItemToNumberArray = () => setNumberArrayValueState(prevArray => [...prevArray, prevArray.length + 1]);
+  const removeItemFromNumberArray = () => setNumberArrayValueState(prevArray => prevArray.slice(0, -1));
+  const addItemToObjectArray = () => setObjectArrayValueState(prevArray => [...prevArray, { key: 'new value' }]);
+  const removeItemFromObjectArray = () => setObjectArrayValueState(prevArray => prevArray.slice(0, -1));
 
   return (
     <>
       {/* Ispis vrijednosti u browseru */}
-      <p>{stringValue}</p>
-      <p>{stringArrayValue.join(', ')}</p>
-      <p>{numberValue}</p>
-      <p>{numberArrayValue.join(', ')}</p>
-      <p>{JSON.stringify(objectValue)}</p>
-      <p>{objectArrayValue.map(obj => JSON.stringify(obj)).join(', ')}</p>
-      <p>{booleanValue.toString()}</p>
-      
+      <p>{stringValueState}</p>
+      <p>{stringArrayValueState.join(', ')}</p>
+      <p>{numberValueState}</p>
+      <p>{numberArrayValueState.join(', ')}</p>
+      <p>{JSON.stringify(objectValueState)}</p>
+      <p>{objectArrayValueState.map(obj => JSON.stringify(obj)).join(', ')}</p>
+      <p>{booleanValueState.toString()}</p>
 
       {/* Pozivanje funkcija za promjenu stanja */}
       <button onClick={changeStringValue}>Change String Value</button>
@@ -62,8 +59,6 @@ const StateTest = () => {
       <button onClick={removeItemFromNumberArray}>Remove Item from Number Array</button>
       <button onClick={addItemToObjectArray}>Add Item to Object Array</button>
       <button onClick={removeItemFromObjectArray}>Remove Item from Object Array</button>
-
-     
     </>
   );
 };

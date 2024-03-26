@@ -25,4 +25,8 @@ export const navigationData: LinkType[] = [
     href: "/pokemon",
     label: "Pokemon",
   },
+  {
+    href: "/statetest",
+    label: "StateTest",
+  },
 ];

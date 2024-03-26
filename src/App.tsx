@@ -7,6 +7,7 @@ import NoMatch from "./pages/no-match";
 import Mewtwo from "./pages/mewtwo";
 import Croatia from "./pages/croatia";
 import Pokemon from "./pages/pokemon";
+import StateTest from "./pages/statetest";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="about" element={<About />}>
             <Route path="history" element={"History"} />
           </Route>
+          <Route path="statetest" element={<StateTest />} />
           <Route path="contact" element={<Contact />} />
 
           {/* Using path="*"" means "match anything", so this route

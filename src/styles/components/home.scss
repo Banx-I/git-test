@@ -1,0 +1,128 @@
+
+  
+  .profile {
+    background: #fbc2eb; 
+    background: -webkit-linear-gradient(to right, rgb(31, 32, 30), rgb(11, 52, 9)); 
+    background: linear-gradient(to right, rgb(237, 251, 194), rgb(37, 38, 36)); 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 85rem; 
+    margin: 0 auto; 
+    height: 75rem;
+
+     &__top {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%; 
+        background-color: #ddd; 
+      }
+      &__info {
+        flex: 1; 
+        margin-left: 16px;
+      }
+      &__name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      &__location {
+        color: gray;
+        font-size: 14px;
+      }
+      &__stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        gap: 6rem;
+      }
+      &__item {
+        text-align: center;
+      }
+      &__count {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      &__label {
+        color: gray;
+        font-size: 14px;
+      }
+      &__top {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+      }
+      &__button {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+      }
+      &__side {
+        background-color: var(--color-gray-100);
+        padding: 2rem 1rem;
+        border-radius: var(--border-rounded);
+        height: 30rem;
+      }
+      &__main {
+        background-color: var(--color-gray-100);
+        padding: 2rem 1rem;
+        border-radius: var(--border-rounded);
+        height: 30rem;
+      }
+      &__body {
+        display: flex;
+        gap: 1rem;
+      
+      }
+      &__main {
+        flex-grow: 1;
+      }
+      &__side {
+        width: 27rem;
+        flex-shrink: 0;
+      }
+      &__photo {
+        border-radius: var(--border-round);
+        object-fit: cover;
+        padding: 0.5rem;
+        width: 12rem;
+        height: 12rem;
+        overflow: hidden;
+        transition: all 500ms ease-in-out;
+        border-radius: 30px;
+        &:hover {
+          scale: 1.4;
+        }
+      }
+    }
+
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  

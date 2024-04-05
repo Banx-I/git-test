@@ -47,7 +47,10 @@ body {
   position: absolute;
 }
 
-
+.link {
+  color: var(--color-black);
+  display: block;
+}
 
 
 //IMPORTS
@@ -57,7 +60,10 @@ body {
 @import "./components/header.scss";
 @import "./components/nav.scss";
 @import "./components/tag.scss";
-
+@import "./components/gallery.scss";
+@import "./components/button.scss";
+@import "./components/ulmap.scss";
+@import "./components/home.scss";
 
 //utils
 @import "./utils/margins.scss";

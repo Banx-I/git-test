@@ -6,27 +6,7 @@ export const navigationData: LinkType[] = [
     label: "Home",
   },
   {
-    href: "/about",
-    label: "About",
-  },
-  {
-    href: "/cubemovement",
-    label: "CubeMovement",
-  },
-  {
-    href: "/mewtwo",
-    label: "Mewtwo",
-  },
-  {
-    href: "/croatia",
-    label: "Croatia",
-  },
-  {
-    href: "/pokemon",
-    label: "Pokemon",
-  },
-  {
-    href: "/statetest",
-    label: "StateTest",
+    href: "/vjezbe",
+    label: "Vježbe",
   },
 ];

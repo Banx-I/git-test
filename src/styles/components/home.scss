@@ -24,7 +24,13 @@
         height: 80px;
         border-radius: 50%; 
         background-color: #ddd; 
+        transition: transform 0.3s ease;
+        
       }
+      .profile__img:hover {
+        transform: scale(1.2); /* Scale the logo on hover */
+    }
+    
       &__info {
         flex: 1; 
         margin-left: 16px;
@@ -68,12 +74,29 @@
         display: flex;
         justify-content: space-between;
         padding: 2rem;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
       }
+      .profile__button > *:hover {
+    background-color: rgba(147, 19, 19, 0.1);
+    color: #fff;
+}
+      
+    
+     
+      
       &__side {
         background-color: var(--color-gray-100);
-        padding: 2rem 1rem;
         border-radius: var(--border-rounded);
         height: 30rem;
+    
+        &__img {
+          width: 100%; /* Postavite širinu slike na 100% okvira */
+          height: 100%; /* Postavite visinu slike na 100% okvira */
+          background-size: cover; /* Postavite sliku da pokriva cijeli okvir */
+          object-fit: cover;
+          border-radius: var(--border-rounded);
+        }
       }
       &__main {
         background-color: var(--color-gray-100);
@@ -106,6 +129,7 @@
           scale: 1.4;
         }
       }
+      
     }
 
   

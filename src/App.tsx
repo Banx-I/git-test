@@ -14,6 +14,7 @@ import ProfileMaker from "./pages/profile-maker";
 import DataTypes from "./pages/data-types";
 import UseStateComponent from "./pages/usestatecomponent";
 import Gitare from "./pages/gitare";
+import Tabs from "./pages/tabs";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
     <Route path="gallery" element={<Gallery />} />
     <Route path="croatia" element={<Croatia />} />
     <Route path="gitare" element={<Gitare />} />
+    <Route path="tabs" element={<Tabs />} />
     <Route path="profile-maker" element={<ProfileMaker />} />
     <Route path="data-types" element={<DataTypes />} />
     <Route path="about" element={<About />} />

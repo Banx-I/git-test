@@ -1,0 +1,82 @@
+.movie {
+    &__container {
+        display: flex;
+    }
+
+    &__actor {
+      
+      align-items: center;
+      gap: 1rem;
+      background-color: white;
+      border-radius: 8px;
+      width: 10rem;
+      img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 8px;
+        background-size: cover;
+        
+        
+      }
+
+    }
+    
+    &__grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      left: 50%
+      
+      
+    }
+    &__names {
+      height: 4rem;
+      padding: 0.3rem;
+    }
+    &__frontprofile {
+      display: flex;
+    }
+
+   &__details {
+    padding: 1rem;
+   }
+   &__wrapper {
+    margin-top: 9rem;
+   }
+   &__down {
+    height: 20rem;
+    width: 60rem;
+    background-color: white;
+    position: relative;
+    top: 6rem;
+    right: 20rem;
+   
+   }
+   &__content {
+    max-height: 100%;
+    max-width: 100%;
+   }
+   &__opisImg {
+        width: 30rem;
+        height: 20rem;
+        object-fit: cover;
+        background-size: cover;
+        border-radius: 8px;
+        position: relative;
+        left: 89%;
+
+        
+   }
+   &__profile {
+    height: 18rem;
+   }
+   &__main {
+    display: flex;
+   }
+  }
+  h3 {
+    position: relative;
+    left: 16rem;
+  }
